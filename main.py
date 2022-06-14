@@ -1,14 +1,16 @@
+from pydoc import tempfilepager
 from time import sleep
 from tinydb import TinyDB, Query
 import telebot
 import subprocess as sb
 import threading
 from telebot import types
-bot = telebot.TeleBot("5556451898:AAH--dXZZ-DZNKQtqB_sWcaoyWfa7xJtpOU", threaded=False)
+USERID = 999711677
+TELEGRAMTOKEN = 'your token'
+
+bot = telebot.TeleBot(TELEGRAMTOKEN, threaded=False)
 db = TinyDB('mangaDB.json')
 q = Query()
-USERID = 999711677
-
 
 
 def getMangaInfo(url): #    https://mangalib.me/promisecinderella?section=info
